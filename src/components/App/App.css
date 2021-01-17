@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    
+}
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: darkgrey;
+
+    
+}
+.text{
+    display: inline-block;
+
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(122, 155, 119);
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(126, 138, 125);
+}
+.dashcontent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.dashcontent .btn{
+    margin-top: 10px;
+}
