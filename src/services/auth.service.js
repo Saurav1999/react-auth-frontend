@@ -4,11 +4,30 @@ const API_URL = "http://localhost:5000";
 
 class AuthService {
   async getTokens(authCode) {
-    const response = await axios.post(API_URL + "/generateTokens", {
-      code: authCode,
-    });
+    try {
+      const response = await axios.get(API_URL + "/generateTokens", {
+        params: {
+          code: authCode,
+        },
+      });
+      return response;
+    } catch (err) {
+      throw err;
+    }
+  }
+  async refreshAccessToken(refreshToken)
+  {
+    try {
+      const response = await axios.post(API_URL + "/refreshAccessToken", {
+      
+          refreshToken,
+        
+      });
 
-    return response.data;
+      return response;
+    } catch (err) {
+      throw err;
+    }
   }
 
   logout() {

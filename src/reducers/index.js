@@ -1,10 +1,11 @@
 import userReducer from './userReducer'
-import commentReducer from './commentReducer'
+import processesReducer from './processesReducer'
 import {combineReducers} from 'redux'
 
 const rootReducer = combineReducers({
-    userReducer,
-    commentReducer
+    userData:userReducer,
+    processes:processesReducer 
+    
 })
 
 export default rootReducer
